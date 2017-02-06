@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Movies</string>
-    <string name="string_refresh">Refresh</string>
+    <string name="error_message">An error occurred while retrieving information. Please try again later.</string>
     <string name="original_movie_title_string">Original Title</string>
     <string name="synopsis_string">Synopsis</string>
     <string name="string_release_date">Release Date</string>
     <string name="sort_by_popularity">Most Popular</string>
     <string name="sort_by_rating">Top Rated</string>
+    <string name="string_rating">Rating</string>
+    <string name="votes_string">votes</string>
 </resources>

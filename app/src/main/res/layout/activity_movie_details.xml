@@ -88,6 +88,28 @@
 
             <!-- End of release date section -->
 
+            <!-- Rating section -->
+            <TextView
+                android:id="@+id/tv_rating_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_release_date"
+                android:text="@string/string_rating"
+                style="@style/section_header_style"/>
+
+            <TextView
+                android:layout_below="@+id/tv_rating_section"
+                android:layout_alignLeft="@+id/tv_rating_section"
+                android:layout_alignRight="@+id/tv_rating_section"
+                style="@style/section_separator" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rating_section"
+                style="@style/section_text_style"/>
+            <!-- end of Rating section -->
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>

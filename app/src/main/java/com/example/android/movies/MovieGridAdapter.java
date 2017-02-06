@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.android.movies.MovieApi.Config;
 import com.example.android.movies.MovieApi.Models.Movie;
@@ -14,12 +13,12 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 /**
- * Created by sv01 on 28-01-2017.
+ * Created by Pedro Valério on 28-01-2017.
  */
 
 public class MovieGridAdapter extends RecyclerView.Adapter<MovieGridAdapter.MovieGridViewHolder> {
 
-    List<Movie> mMovieList;
+    private List<Movie> mMovieList;
     private ListItemClickListener mListener;
 
     public MovieGridAdapter(List<Movie> movieList, ListItemClickListener listener){
@@ -63,10 +62,12 @@ public class MovieGridAdapter extends RecyclerView.Adapter<MovieGridAdapter.Movi
             if (m.getPosterPath() != null) {
                 if(Config.getPosterSizes().contains("w500")) {
                     String imagePath = Config.getImagesBaseUrl() + "w500" + m.getPosterPath();
-                    Picasso.with(mView.getContext()).load(imagePath).resize(300, 500).centerCrop().into(mView);
+                    Picasso.with(mView.getContext()).load(imagePath).resize(300, 500).centerInside().into(mView);
                 }
             }
-            //((TextView) mView).setText(m.getTitle());
+            else {
+                Picasso.with(mView.getContext()).load(R.drawable.no_image_available).resize(300, 500).centerInside().into(mView);
+            }
         }
 
         @Override

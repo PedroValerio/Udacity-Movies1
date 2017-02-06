@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Created by sv01 on 29-01-2017.
+ * Created by Pedro Valério on 29-01-2017.
  */
 
 public class ImageApiConfiguration {

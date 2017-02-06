@@ -1,6 +1,5 @@
 package com.example.android.movies.MovieApi;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -8,26 +7,23 @@ import java.util.List;
  */
 
 public class Config {
-    private static final String API_KEY = "##API KEY HERE##";
+    public static final String SORT_POPULARITY_DESC = "popularity.desc";
+    public static final String SORT_RATING_DESC = "vote_average.desc";
 
+    private static final String API_KEY = "API KEY HERE";
     private static final String API_BASE_URL = "https://api.themoviedb.org/3/";
+    private static final String USER_LANGUAGE = "en-us";
 
     private static String mImagesBaseUrl;
-
     private static List<String> mPosterSizes;
 
-    private static final String USERLANG = "en-us";
-
-    public static final String SORT_POPULARITY_DESC = "popularity.desc";
-
-    public static final String SORT_RATING_DESC = "vote_average.desc";
 
     public static String getBaseUrl(){
         return API_BASE_URL;
     }
 
     public static String getUserLang(){
-        return USERLANG;
+        return USER_LANGUAGE;
     }
 
     public static String getApiKey(){
