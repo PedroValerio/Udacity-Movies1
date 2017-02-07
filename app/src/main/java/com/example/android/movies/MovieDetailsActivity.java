@@ -41,8 +41,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
         mTitleTv = (TextView) findViewById(R.id.action_bar_title_left);
         mRatingTv = (TextView) findViewById(R.id.tv_rating);
 
-        Movie movieObject = (Movie) getIntent().getSerializableExtra("movieObj");
-        displayMovieInformation(movieObject);
+        if(getIntent() != null && getIntent().hasExtra("movieObj")) {
+            Movie movieObject = (Movie) getIntent().getSerializableExtra("movieObj");
+            displayMovieInformation(movieObject);
+        }
     }
 
     private void displayMovieInformation(Movie movieObject) {
