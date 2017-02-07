@@ -1,5 +1,7 @@
 package com.example.android.movies.MovieApi;
 
+import com.example.android.movies.BuildConfig;
+
 import java.util.List;
 
 /**
@@ -10,7 +12,7 @@ public class Config {
     public static final String SORT_POPULARITY_DESC = "popularity.desc";
     public static final String SORT_RATING_DESC = "vote_average.desc";
 
-    private static final String API_KEY = "API KEY HERE";
+    private static final String API_KEY = BuildConfig.MOVIEDB_API_KEY;
     private static final String API_BASE_URL = "https://api.themoviedb.org/3/";
     private static final String USER_LANGUAGE = "en-us";
 
