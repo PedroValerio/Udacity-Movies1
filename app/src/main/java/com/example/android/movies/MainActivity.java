@@ -275,9 +275,9 @@ public class MainActivity extends AppCompatActivity implements MovieGridAdapter.
 
             // Change 3rd parameter depending on sort criteria
             if (this.mSortCriteria == SORT_BY_POPULARITY)
-                discoverCall = service.discoverMovies(Config.getApiKey(), Config.getUserLang(), Config.SORT_POPULARITY_DESC, mPageNumber);
+                discoverCall = service.getPopularMovies(Config.getApiKey(), Config.getUserLang(), mPageNumber);
             else
-                discoverCall = service.discoverMovies(Config.getApiKey(), Config.getUserLang(), Config.SORT_RATING_DESC, mPageNumber);
+                discoverCall = service.getTopRatedMovies(Config.getApiKey(), Config.getUserLang(), mPageNumber);
 
             // Get available image resources in the API
             Call<ImageApiConfiguration> configurationCall = service.getConfiguration(Config.getApiKey());

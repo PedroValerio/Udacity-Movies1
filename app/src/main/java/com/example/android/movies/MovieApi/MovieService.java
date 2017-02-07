@@ -16,9 +16,13 @@ public interface MovieService {
     @GET("configuration")
     Call<ImageApiConfiguration> getConfiguration(@Query("api_key") String apiKey);
 
-    @GET("discover/movie?include_adult=false&include_video=false&vote_count.gte=100")
-    Call<DiscoverResults> discoverMovies(@Query("api_key") String apiKey,
-                                         @Query("language") String lang,
-                                         @Query("sort_by") String sortCriteria,
-                                         @Query("page") int pageNumber);
+    @GET("movie/popular")
+    Call<DiscoverResults> getPopularMovies(@Query("api_key") String apiKey,
+                                           @Query("language") String lang,
+                                           @Query("page") int pageNumber);
+
+    @GET("movie/top_rated")
+    Call<DiscoverResults> getTopRatedMovies(@Query("api_key") String apiKey,
+                                           @Query("language") String lang,
+                                           @Query("page") int pageNumber);
 }
